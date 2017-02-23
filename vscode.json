@@ -1,0 +1,24 @@
+// Place your settings in this file to overwrite the default settings
+{
+  // Controls auto save of dirty files. Accepted values:  "off", "afterDelay", "onFocusChange" (editor loses focus), "onWindowChange" (window loses focus). If set to "afterDelay", you can configure the delay in "files.autoSaveDelay".
+  "files.autoSave": "onWindowChange",
+
+  // The number of spaces a tab is equal to. This setting is overriden based on the file contents when `editor.detectIndentation` is on.
+  "editor.tabSize": 2,
+
+  // Controls how the editor should render whitespace characters, possibilities are 'none', 'boundary', and 'all'. The 'boundary' option does not render single spaces between words.
+  "editor.renderWhitespace": "all",
+
+  // Controls the location of the sidebar. It can either show on the left or right of the workbench.
+  "workbench.sideBar.location": "right",
+
+  // Number of editors shown in the Open Editors pane. Set it to 0 to hide the pane.
+  "explorer.openEditors.visible": 0,
+
+  // Configure glob patterns for excluding files and folders in searches. Inherits all glob patterns from the files.exclude setting.
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/coverage": true
+  }
+}
