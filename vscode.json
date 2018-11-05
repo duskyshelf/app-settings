@@ -1,7 +1,7 @@
 // Place your settings in this file to overwrite the default settings
 {
   // Controls auto save of dirty files. Accepted values:  "off", "afterDelay", "onFocusChange" (editor loses focus), "onWindowChange" (window loses focus). If set to "afterDelay", you can configure the delay in "files.autoSaveDelay".
-  "files.autoSave": "onWindowChange",
+  "files.autoSave": "onFocusChange",
 
   // The number of spaces a tab is equal to. This setting is overriden based on the file contents when `editor.detectIndentation` is on.
   "editor.tabSize": 2,
@@ -16,7 +16,7 @@
   "editor.renderWhitespace": "all",
 
   // Controls the location of the sidebar. It can either show on the left or right of the workbench.
-  "workbench.sideBar.location": "right",
+  "workbench.sideBar.location": "left",
 
   // Number of editors shown in the Open Editors pane. Set it to 0 to hide the pane.
   "explorer.openEditors.visible": 0,
@@ -25,12 +25,50 @@
   "search.exclude": {
     "**/node_modules": true,
     "**/bower_components": true,
-    "**/coverage": true
+    "**/coverage": true,
+    "**/*.nyc_output": true
   },
+
+  // Controls if the minimap is shown
+  "editor.minimap.enabled": true,
+
+  // Limit the width of the minimap to render at most a certain number of columns
+  "editor.minimap.maxColumn": 50,
 
   // When enabled, will trim trailing whitespace when saving a file.
   "files.trimTrailingWhitespace": true,
 
   // Tab Size
-  "beautify.tabSize": 2,
+  "extensions.ignoreRecommendations": false,
+  "workbench.iconTheme": "vscode-icons",
+  "vsicons.dontShowNewVersionMessage": true,
+  "window.zoomLevel": 0,
+  "gitlens.advanced.messages": {
+    "suppressShowKeyBindingsNotice": true,
+    "suppressWelcomeNotice": true
+  },
+
+  // Prettier
+  "prettier.singleQuote": true,
+
+  // Always show rule failures as warnings, independent of the tslint configuration.
+  "tslint.alwaysShowRuleFailuresAsWarnings": true,
+
+  "[markdown]": {
+    // When enabled, will trim trailing whitespace when saving a file.
+    "files.trimTrailingWhitespace": false
+  },
+  "gitlens.keymap": "none",
+  "search.location": "sidebar",
+  "workbench.activityBar.visible": true,
+  "breadcrumbs.enabled": true,
+
+  // Format a file on save. A formatter must be available, the file must not be auto-saved, and editor must not be shutting down.
+  "editor.formatOnSave": true,
+  "[handlebars]": {
+    "editor.formatOnSave": false
+  },
+
+  // Use 'prettier-eslint' instead of 'prettier'. Other settings will only be fallbacks in case they could not be inferred from eslint rules.
+  "prettier.eslintIntegration": true
 }
